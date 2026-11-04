@@ -1,0 +1,48 @@
+══════════════════════════════════════════════════════════
+      My ARTfive!
+  (Authentication!)
+══════════════════════════════════════════════════════════
+
+Authentication as a Service – Updated
+
+WHO CAN REGISTER NOW
+--------------------
+• Companies
+• Schools
+• Colleges
+• Hotels
+• PRP
+• Any business
+
+They register with:
+  - Company / Business Name
+  - Phone Number
+  - Password
+
+YOU (ADMIN)
+-----------
+Login with Email + Password
+Full control in My Dashboard!
+
+DEFAULT ADMIN
+-------------
+Email    : admin@myartfive.com
+Password : Admin@123
+
+HOW TO RUN
+----------
+cd backend
+node server.js
+
+Then open frontend/index.html in browser.
+
+TEST FLOW
+---------
+1. Admin login → My Dashboard! → see Businesses
+2. Register a new business (Company name + Phone + Password)
+3. Login as that business with Phone + Password
+4. See Business Dashboard
+
+This is the foundation for Authentication as a Service.
+Later: phone app + Play Store.
+══════════════════════════════════════════════════════════
