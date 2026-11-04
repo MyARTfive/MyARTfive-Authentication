@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>My ARTfive! (Authentication!)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="brand">
+      <div class="brand-title">My ARTfive!</div>
+      <div class="brand-sub">(Authentication!)</div>
+    </header>
+
+    <!-- LOGIN -->
+    <section id="screen-login" class="screen">
+      <div class="card">
+        <h2>Login</h2>
+        <div class="tabs">
+          <button class="tab active" data-type="business">Business</button>
+          <button class="tab" data-type="admin">Admin</button>
+        </div>
+
+        <div id="login-business">
+          <label>Phone Number</label>
+          <input type="tel" id="b-phone" placeholder="Registered phone number" maxlength="15" />
+          <label>Password</label>
+          <input type="password" id="b-pass" placeholder="Password" />
+          <button class="btn primary" id="btn-login-business">Login</button>
+          <p class="link" id="go-register">New business? Register here</p>
+        </div>
+
+        <div id="login-admin" class="hidden">
+          <label>Email</label>
+          <input type="email" id="a-email" placeholder="Admin email" />
+          <label>Password</label>
+          <input type="password" id="a-pass" placeholder="Password" />
+          <button class="btn primary" id="btn-login-admin">Login to My Dashboard!</button>
+        </div>
+        <p id="login-msg" class="msg"></p>
+      </div>
+    </section>
+
+    <!-- REGISTER BUSINESS -->
+    <section id="screen-register" class="screen hidden">
+      <div class="card">
+        <h2>Business Registration</h2>
+        <p class="note">For companies, schools, colleges, hotels, PRP etc.</p>
+        <label>Company / Business Name</label>
+        <input type="text" id="r-company" placeholder="Your company or business name" />
+        <label>Your Name (optional)</label>
+        <input type="text" id="r-name" placeholder="Contact person name" />
+        <label>Phone Number</label>
+        <input type="tel" id="r-phone" placeholder="Phone number" maxlength="15" />
+        <label>Password</label>
+        <input type="password" id="r-pass" placeholder="Create password (min 6)" />
+        <button class="btn primary" id="btn-register">Register Business</button>
+        <p class="link" id="go-login">Already registered? Login</p>
+        <p id="reg-msg" class="msg"></p>
+      </div>
+    </section>
+
+    <!-- BUSINESS DASHBOARD -->
+    <section id="screen-business" class="screen hidden">
+      <div class="card">
+        <h2 id="b-title">Business Dashboard</h2>
+        <p class="welcome" id="b-welcome">Welcome</p>
+        <div class="menu" id="b-menu">
+          <button class="menu-btn" data-page="home">1. Home</button>
+          <button class="menu-btn" data-page="account">2. My Account</button>
+          <button class="menu-btn" data-page="payments">3. Payments (UPI + QR)</button>
+          <button class="menu-btn" data-page="bill">4. My Bill</button>
+          <button class="menu-btn" data-page="notifications">5. Notifications</button>
+          <button class="menu-btn" data-page="updates">6. New App Update</button>
+          <button class="menu-btn danger" id="btn-logout-b">7. Logout</button>
+        </div>
+        <div id="b-content" class="content hidden"></div>
+        <button class="btn back hidden" id="b-back">← Back to Menu</button>
+      </div>
+    </section>
+
+    <!-- MY DASHBOARD! (Admin) -->
+    <section id="screen-admin" class="screen hidden">
+      <div class="card">
+        <h2>My Dashboard!</h2>
+        <p class="welcome">Full Control Panel</p>
+        <div class="menu" id="a-menu">
+          <button class="menu-btn" data-page="home">1. Dashboard Home</button>
+          <button class="menu-btn" data-page="businesses">2. Businesses / Companies</button>
+          <button class="menu-btn" data-page="allow">3. Allow / Deny Login</button>
+          <button class="menu-btn" data-page="reset">4. Reset Password</button>
+          <button class="menu-btn" data-page="notifications">5. Notifications</button>
+          <button class="menu-btn" data-page="payment">6. Payment Settings (UPI + QR)</button>
+          <button class="menu-btn" data-page="bill">7. Send Bill</button>
+          <button class="menu-btn" data-page="analysis">8. App Analysis</button>
+          <button class="menu-btn" data-page="updates">9. App Updates</button>
+          <button class="menu-btn" data-page="view">10. View Business Dashboard</button>
+          <button class="menu-btn" data-page="all-edit">11. All Edit</button>
+          <button class="menu-btn danger" id="btn-logout-a">12. Logout</button>
+        </div>
+        <div id="a-content" class="content hidden"></div>
+        <button class="btn back hidden" id="a-back">← Back to Menu</button>
+      </div>
+    </section>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
